@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "qTXqT1Tv6mWQr0RPobJ8cwMaKRQAC4akaSNjeEqpu6MWUuUeO8Jt0Jlbj+JvcVzZGeGbt79LxojFpP/OXWGmAg==",
+  "success": true,
+  "projectFilePath": "D:\\Excel2Csv\\Excel2Csv\\Excel2Csv.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\dotnetcore.npoi\\1.2.2\\dotnetcore.npoi.1.2.2.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\dotnetcore.npoi.core\\1.2.2\\dotnetcore.npoi.core.1.2.2.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\dotnetcore.npoi.openxml4net\\1.2.2\\dotnetcore.npoi.openxml4net.1.2.2.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\dotnetcore.npoi.openxmlformats\\1.2.2\\dotnetcore.npoi.openxmlformats.1.2.2.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\exceldatareader\\3.6.0\\exceldatareader.3.6.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\exceldatareader.dataset\\3.6.0\\exceldatareader.dataset.3.6.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\excelnumberformat\\1.0.10\\excelnumberformat.1.0.10.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.1\\microsoft.netcore.platforms.3.1.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.win32.systemevents\\4.5.0\\microsoft.win32.systemevents.4.5.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\sharpziplib\\1.2.0\\sharpziplib.1.2.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.drawing.common\\4.5.0\\system.drawing.common.4.5.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.text.encoding.codepages\\4.7.1\\system.text.encoding.codepages.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}

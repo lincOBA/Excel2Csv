@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Excel2Csv": {
+      "commandName": "Project",
+      "workingDirectory": "D:\\doc\\xianxia-lin"
+    }
+  }
+}
