@@ -24,13 +24,7 @@ namespace Excel2Csv
             return Convert.ToString(value, culture);
         }
 
-        public bool ConvertCsv(string src, string tar)
-        {
-            GetExcelData(src);
-            return true;
-        }
-
-        private void GetExcelData(string file)
+        public void ConvertCsv(string file)
         {
             CultureInfo culture = CultureInfo.GetCultureInfo("zh-cn");
 
@@ -40,10 +34,13 @@ namespace Excel2Csv
                 var reader = ExcelReaderFactory.CreateOpenXmlReader(stream);
                 do
                 {
+
                     ConverToCSV(reader, culture);
+
                 } while (reader.NextResult());
             }
         }
+
 
         private void DealEmoji(ref string str)
         {
@@ -55,8 +52,6 @@ namespace Excel2Csv
         {
             // sheets in excel file becomes tables in dataset
             // result.Tables[0].TableName.ToString(); // to get sheet name (table name)
-
-            Console.WriteLine("    " + reader.Name);
 
             var csvCon = new System.Text.StringBuilder("");
 
@@ -100,12 +95,19 @@ namespace Excel2Csv
                         csvCon.Append(str + System.Environment.NewLine);
                     }
                 }
-            } 
+            }
 
-            string output = @"csv\" + reader.Name + ".csv";
-            StreamWriter csv = new StreamWriter(@output, false, Encoding.UTF8);
-            csv.Write(csvCon.ToString());
-            csv.Close();
+            try
+            {
+                string output = @"csv\" + reader.Name + ".csv";
+                StreamWriter csv = new StreamWriter(@output, false, Encoding.UTF8);
+                csv.Write(csvCon.ToString());
+                csv.Close();
+            }
+            catch
+            {
+                Console.WriteLine("skip :" + reader.Name);
+            }
 
             return true;
         }
