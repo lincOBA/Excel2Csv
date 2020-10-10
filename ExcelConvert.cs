@@ -48,6 +48,7 @@ namespace Excel2Csv
         private void DealEmoji(ref string str)
         {
             str = Regex.Replace(str, @"\p{Cs}", "");
+            str = Regex.Replace(str, @"\n", System.Environment.NewLine);
         }
 
         private bool ConverToCSV(IExcelDataReader reader, CultureInfo culture)
@@ -85,7 +86,7 @@ namespace Excel2Csv
 
                     DealEmoji(ref str);
 
-                    if (str.Contains("\n") || str.Contains(","))
+                    if (str.Contains(System.Environment.NewLine) || str.Contains(","))
                     {
                         str = "\"" + str + "\"";
                     }
@@ -102,7 +103,7 @@ namespace Excel2Csv
             } 
 
             string output = @"csv\" + reader.Name + ".csv";
-            StreamWriter csv = new StreamWriter(@output, false);
+            StreamWriter csv = new StreamWriter(@output, false, Encoding.UTF8);
             csv.Write(csvCon.ToString());
             csv.Close();
 
