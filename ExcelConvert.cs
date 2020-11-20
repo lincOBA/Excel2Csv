@@ -12,14 +12,38 @@ namespace Excel2Csv
 {
     class ExcelConvert
     {
-        public string GetFormattedValue(IExcelDataReader reader, int columnIndex, CultureInfo culture)
+        public const int doublePointKeepCnt = 5;
+
+		public int getDoublePointCnt(String param)
+		{
+			String[] ss = param.Split(".");
+
+			if (ss.Length <= 1)
+			{
+				return 0;
+			}
+
+			return ss[1].Length;
+		}
+
+		public string GetFormattedValue(IExcelDataReader reader, int columnIndex, CultureInfo culture)
         {
             var value = reader.GetValue(columnIndex);
+
             var formatString = reader.GetNumberFormatString(columnIndex);
             if (formatString != null)
             {
                 var format = new NumberFormat(formatString);
-                return format.Format(value, culture);
+
+                var forstr = format.Format(value, culture);
+
+                if (value != null && value.GetType() == typeof(System.Double) && getDoublePointCnt(forstr) > doublePointKeepCnt)
+				{
+                    forstr = Convert.ToDouble(forstr).ToString("F" + doublePointKeepCnt.ToString());
+                    forstr = Convert.ToDouble(forstr).ToString("G");
+				}
+
+				return forstr;
             }
             return Convert.ToString(value, culture);
         }
@@ -30,15 +54,22 @@ namespace Excel2Csv
 
             if (file.EndsWith(".xlsx"))
             {
-                var stream = File.Open(file, FileMode.Open, FileAccess.Read);
-                var reader = ExcelReaderFactory.CreateOpenXmlReader(stream);
-                do
+                try
                 {
+					var stream = File.Open(file, FileMode.Open, FileAccess.Read);
+					var reader = ExcelReaderFactory.CreateOpenXmlReader(stream);
+					do
+					{
 
-                    ConverToCSV(reader, culture);
+						ConverToCSV(reader, culture);
 
-                } while (reader.NextResult());
-            }
+					} while (reader.NextResult());
+				}
+				catch
+				{
+					Console.WriteLine("警告：文件已被其他线程处理 " + file + ",请截图给维护人员 ");
+				}
+			}
         }
 
 
@@ -46,7 +77,8 @@ namespace Excel2Csv
         {
             str = Regex.Replace(str, @"\p{Cs}", "");
             str = Regex.Replace(str, @"\n", System.Environment.NewLine);
-        }
+			str = str.Trim();
+		}
 
         private bool ConverToCSV(IExcelDataReader reader, CultureInfo culture)
         {
@@ -106,7 +138,7 @@ namespace Excel2Csv
             }
             catch
             {
-                Console.WriteLine("skip :" + reader.Name);
+                Console.WriteLine("INFO：跳过重复的表 " + reader.Name);
             }
 
             return true;
