@@ -41,10 +41,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "DotNetCore.NPOI": {
-              "target": "Package",
-              "version": "[1.2.2, )"
-            },
             "ExcelDataReader": {
               "target": "Package",
               "version": "[3.6.0, )"

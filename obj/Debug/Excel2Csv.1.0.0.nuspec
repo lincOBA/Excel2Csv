@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Excel2Csv</id>
+    <version>1.0.0</version>
+    <authors>Excel2Csv</authors>
+    <owners>Excel2Csv</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="DotNetCore.NPOI" version="1.2.2" exclude="Build,Analyzers" />
+        <dependency id="ExcelDataReader" version="3.6.0" exclude="Build,Analyzers" />
+        <dependency id="ExcelDataReader.DataSet" version="3.6.0" exclude="Build,Analyzers" />
+        <dependency id="ExcelNumberFormat" version="1.0.10" exclude="Build,Analyzers" />
+        <dependency id="System.Text.Encoding.CodePages" version="4.7.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Excel2Csv\Excel2Csv\bin\Debug\netcoreapp3.1\Excel2Csv.runtimeconfig.json" target="lib\netcoreapp3.1\Excel2Csv.runtimeconfig.json" />
+    <file src="D:\Excel2Csv\Excel2Csv\bin\Debug\netcoreapp3.1\Excel2Csv.dll" target="lib\netcoreapp3.1\Excel2Csv.dll" />
+  </files>
+</package>

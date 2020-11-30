@@ -4,15 +4,8 @@ D:\Excel2Csv\Excel2Csv\bin\Release\netcoreapp3.1\win-x86\Excel2Csv.runtimeconfig
 D:\Excel2Csv\Excel2Csv\bin\Release\netcoreapp3.1\win-x86\Excel2Csv.runtimeconfig.dev.json
 D:\Excel2Csv\Excel2Csv\bin\Release\netcoreapp3.1\win-x86\Excel2Csv.dll
 D:\Excel2Csv\Excel2Csv\bin\Release\netcoreapp3.1\win-x86\Excel2Csv.pdb
-D:\Excel2Csv\Excel2Csv\bin\Release\netcoreapp3.1\win-x86\NPOI.OOXML.dll
-D:\Excel2Csv\Excel2Csv\bin\Release\netcoreapp3.1\win-x86\NPOI.dll
-D:\Excel2Csv\Excel2Csv\bin\Release\netcoreapp3.1\win-x86\NPOI.OpenXml4Net.dll
-D:\Excel2Csv\Excel2Csv\bin\Release\netcoreapp3.1\win-x86\NPOI.OpenXmlFormats.dll
 D:\Excel2Csv\Excel2Csv\bin\Release\netcoreapp3.1\win-x86\ExcelDataReader.dll
 D:\Excel2Csv\Excel2Csv\bin\Release\netcoreapp3.1\win-x86\ExcelDataReader.DataSet.dll
-D:\Excel2Csv\Excel2Csv\bin\Release\netcoreapp3.1\win-x86\Microsoft.Win32.SystemEvents.dll
-D:\Excel2Csv\Excel2Csv\bin\Release\netcoreapp3.1\win-x86\ICSharpCode.SharpZipLib.dll
-D:\Excel2Csv\Excel2Csv\bin\Release\netcoreapp3.1\win-x86\System.Drawing.Common.dll
 D:\Excel2Csv\Excel2Csv\bin\Release\netcoreapp3.1\win-x86\System.Text.Encoding.CodePages.dll
 D:\Excel2Csv\Excel2Csv\bin\Release\netcoreapp3.1\win-x86\Microsoft.CSharp.dll
 D:\Excel2Csv\Excel2Csv\bin\Release\netcoreapp3.1\win-x86\Microsoft.VisualBasic.Core.dll
@@ -242,3 +235,4 @@ D:\Excel2Csv\Excel2Csv\obj\Release\netcoreapp3.1\win-x86\Excel2Csv.dll
 D:\Excel2Csv\Excel2Csv\obj\Release\netcoreapp3.1\win-x86\Excel2Csv.pdb
 D:\Excel2Csv\Excel2Csv\obj\Release\netcoreapp3.1\win-x86\Excel2Csv.genruntimeconfig.cache
 D:\Excel2Csv\Excel2Csv\bin\Release\netcoreapp3.1\win-x86\ExcelNumberFormat.dll
+D:\Excel2Csv\Excel2Csv\obj\Release\netcoreapp3.1\win-x86\Excel2Csv.csprojAssemblyReference.cache
