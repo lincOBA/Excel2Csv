@@ -12,9 +12,16 @@ namespace Excel2Csv
 {
     class ExcelConvert
     {
-        public const int doublePointKeepCnt = 5;
+		public string mOutPath = "";
 
-		public int getDoublePointCnt(String param)
+		public const int mDoublePointKeepCnt = 5;
+
+        public ExcelConvert(string outPath)
+        {
+            mOutPath = outPath;
+        }
+
+        public int getDoublePointCnt(String param)
 		{
 			String[] ss = param.Split(".");
 
@@ -37,9 +44,9 @@ namespace Excel2Csv
 
                 var forstr = format.Format(value, culture);
 
-                if (value != null && value.GetType() == typeof(System.Double) && getDoublePointCnt(forstr) > doublePointKeepCnt)
+                if (value != null && value.GetType() == typeof(System.Double) && getDoublePointCnt(forstr) > mDoublePointKeepCnt)
 				{
-                    forstr = Convert.ToDouble(forstr).ToString("F" + doublePointKeepCnt.ToString());
+                    forstr = Convert.ToDouble(forstr).ToString("F" + mDoublePointKeepCnt.ToString());
                     forstr = Convert.ToDouble(forstr).ToString("G");
 				}
 
@@ -77,7 +84,8 @@ namespace Excel2Csv
         {
             str = Regex.Replace(str, @"\p{Cs}", "");
             str = Regex.Replace(str, @"\n", System.Environment.NewLine);
-			str = str.Trim();
+            str = str.Replace("\"","\"\"");
+            str = str.Trim();
 		}
 
         private bool ConverToCSV(IExcelDataReader reader, CultureInfo culture)
@@ -131,7 +139,7 @@ namespace Excel2Csv
 
             try
             {
-                string output = @"csv\" + reader.Name + ".csv";
+                string output = mOutPath + @"\" + reader.Name + ".csv";
                 StreamWriter csv = new StreamWriter(@output, false, Encoding.UTF8);
                 csv.Write(csvCon.ToString());
                 csv.Close();

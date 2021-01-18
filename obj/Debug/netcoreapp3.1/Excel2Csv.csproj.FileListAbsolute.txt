@@ -15,15 +15,5 @@ D:\Excel2Csv\Excel2Csv\obj\Debug\netcoreapp3.1\Excel2Csv.pdb
 D:\Excel2Csv\Excel2Csv\obj\Debug\netcoreapp3.1\Excel2Csv.genruntimeconfig.cache
 D:\Excel2Csv\Excel2Csv\bin\Debug\netcoreapp3.1\System.Text.Encoding.CodePages.dll
 D:\Excel2Csv\Excel2Csv\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
-D:\Excel2Csv\Excel2Csv\bin\Debug\netcoreapp3.1\NPOI.OOXML.dll
-D:\Excel2Csv\Excel2Csv\bin\Debug\netcoreapp3.1\NPOI.dll
-D:\Excel2Csv\Excel2Csv\bin\Debug\netcoreapp3.1\NPOI.OpenXml4Net.dll
-D:\Excel2Csv\Excel2Csv\bin\Debug\netcoreapp3.1\NPOI.OpenXmlFormats.dll
-D:\Excel2Csv\Excel2Csv\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
-D:\Excel2Csv\Excel2Csv\bin\Debug\netcoreapp3.1\ICSharpCode.SharpZipLib.dll
-D:\Excel2Csv\Excel2Csv\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
-D:\Excel2Csv\Excel2Csv\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\Microsoft.Win32.SystemEvents.dll
-D:\Excel2Csv\Excel2Csv\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Drawing.Common.dll
-D:\Excel2Csv\Excel2Csv\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Drawing.Common.dll
 D:\Excel2Csv\Excel2Csv\bin\Debug\netcoreapp3.1\ExcelNumberFormat.dll
 D:\Excel2Csv\Excel2Csv\obj\Debug\netcoreapp3.1\Excel2Csv.csproj.CoreCompileInputs.cache
